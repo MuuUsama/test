@@ -1,0 +1,56 @@
+{
+    "data": [
+        {
+            "user":{
+                "name": "أحمد محمود",
+                "phone": "0123456789",
+                "image": "assets/Image-30.png"
+            },
+            "numberTicket": "C-101",
+            "priceTicket": "$40",
+            "cinemas": "سينما مصر, مول العرب, برج الاطنان, سرايا القبة...",
+            "personNumber": "1",
+            "payNumber": "مره واحده",
+            "ticket": "تذكره رقم pdf.45"
+        },
+        {
+            "user":{
+                "name": "محمد الغريب",
+                "phone": "0123456789",
+                "image": "assets/Image-user2.png"
+            },
+            "numberTicket": "C-102",
+            "priceTicket": "$30",
+            "cinemas": "سينما مصر, مول العرب, برج الاطنان, سرايا القبة...",
+            "personNumber": "1",
+            "payNumber": "مره واحده",
+            "ticket": "تذكره رقم pdf.45"
+        },
+        {
+            "user":{
+                "name": "أحمد محمود",
+                "phone": "0123456789",
+                "image": "assets/Image-30.png"
+            },
+            "numberTicket": "C-102",
+            "priceTicket": "$45",
+            "cinemas": "سينما مصر, مول العرب, برج الاطنان, سرايا القبة...",
+            "personNumber": "1",
+            "payNumber": "مره واحده",
+            "ticket": "تذكره رقم pdf.45"
+        },
+        {
+            "user":{
+                "name": "محمد الغريب",
+                "phone": "0123456789",
+                "image": "assets/Image-user2.png"
+            },
+            "numberTicket": "C-103",
+            "priceTicket": "$54",
+            "cinemas": "سينما مصر, مول العرب, برج الاطنان, سرايا القبة...",
+            "personNumber": "1",
+            "payNumber": "مره واحده",
+            "ticket": "تذكره رقم pdf.45"
+        }
+    ]
+}

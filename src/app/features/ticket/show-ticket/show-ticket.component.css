@@ -1,0 +1,92 @@
+  .ticket-container {
+    margin: 1% 4%;
+    color: #fff;
+    background-color: #8a7efa;
+    border-radius: 12.47px;
+    display: flex;
+    flex-direction: column;
+
+    .part1 {
+      padding: 2%;
+      position: relative;
+
+      .content {
+        text-align: center;
+
+        .copy-text {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          width: 60%;
+          background-color: #fff;
+          color: black;
+          margin: 0 auto;
+          margin-bottom: 1.5%;
+          border-radius: 12.47px;
+
+          i {
+            color: #8a7efa;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .ticket-trach {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      .title {
+        font-size: 1.5rem;
+      }
+    }
+
+    .discound-container {
+      display: flex;
+      padding: 2%;
+      border-top: .18em dashed #f2f5f8;
+      position: relative;
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: .9em;
+        height: .9em;
+        background: #f2f5f8;
+        border-radius: 50%;
+      }
+
+      &:before {
+        top: -.4em;
+        left: -.5em;
+      }
+
+      &:after {
+        top: -.4em;
+        right: -.5em;
+      }
+      .discound{
+        .p{
+          font-size: 1rem;
+        }
+        .details {
+          button{
+            border: 1px solid #fff;
+            background-color: transparent;
+            border-radius: 5px;
+            color: #fff;
+            margin-left: 10px;
+            i {
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+
+  }

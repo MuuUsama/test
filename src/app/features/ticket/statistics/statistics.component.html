@@ -1,0 +1,14 @@
+<div class="chart w-100 p-2">
+    <div class="d-flex justify-content-between">
+        <form>
+            <p-dropdown [options]="cities" optionLabel="name"
+                placeholder="Select a City">
+            </p-dropdown>
+        </form>
+        <div>
+            <p>احصائيات استخدام القسيمة</p>
+            <p-calendar [(ngModel)]="rangeDates " selectionMode="range" [readonlyInput]="true"dateFormat=" MM d, yy"></p-calendar>
+        </div>
+    </div>
+    <div echarts [options]="mapOption"></div>
+</div>

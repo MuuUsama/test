@@ -1,0 +1,30 @@
+<div class="ticket-container">
+  <div class="part1">
+    <div class="content">
+      <p class="title">عرض التذكره الخاصة بالفيلم</p>
+      <div class="copy-text">
+        <p class="mt-2" #textToCopy>www.tazkty.com/473847</p>
+        <i class="fa fa-copy" (click)="copyTextToClipboard()"></i>
+      </div>
+      <p>فعال حتي 15 يوليو 2023</p>
+    </div>
+
+    <span class="ticket-trach">
+      <i class="fa fa-trash " data-bs-toggle="tooltip" data-bs-placement="bottom" title="حذف"></i>
+    </span>
+
+  </div>
+  <div class="discound-container">
+    <div class="discound w-50 p-2">
+      <p>{{'rival'| translate}}</p>
+      <div class="details">
+        <span>25%</span>
+        <button><i class="fa fa-share"></i>&nbsp;مشاركة</button>
+      </div>
+    </div>
+    <div class="w-50 pt-2 text-center">
+      <qrcode [qrdata]="'Your data string'" [width]="100" [errorCorrectionLevel]="'M'"></qrcode>
+    </div>
+  </div>
+
+</div>

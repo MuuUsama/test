@@ -1,0 +1,150 @@
+<div class="row mb-2">
+    <div class="col-md-6 d-flex align-items-center search-container">
+        <p class="mr-2 pt-3">مبيعات التذاكر</p>
+        <div>
+            <div class="input-group">
+                <input class="form-control border-end-0 border" type="search" id="example-search-input"
+                    placeholder="بحث عن ...">
+                <span class="input-group-append">
+                    <button class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border ms-n5"
+                        type="button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+            </div>
+        </div>
+
+        <i class="pi pi-sort-alt mr-2 p-2 ml-3"
+            style="transform: rotate(90deg);background-color: #fff;border-radius: 4px;"></i>
+        <i class="pi pi-sort-alt p-2" style="background-color: #fff;border-radius: 4px;"></i>
+
+    </div>
+
+    <div class="col-md-6 d-flex justify-content-end align-items-center switch-container">
+        <div class="form-check form-switch mr-2">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">مفعله</label>
+        </div>
+        <button class="new-ticket">
+            حجز تذكرة جديدة
+        </button>
+    </div>
+    <div style="clear: both;"></div>
+
+</div>
+
+
+<!-- <p-table [columns]="cols" [value]="ticketData" [paginator]="true" [rows]="5" [rowsPerPageOptions]="[5,10,10,20]"
+    [totalRecords]="totalRecords" [pageLinks]="3">
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th pSortableColumn="name" style="width:10%">الاسم</th>
+            <th pSortableColumn="numberTicket" style="width:10%">رقم التذكرة</th>
+            <th pSortableColumn="priceTicket" style="width:10%">قيمى التذكره<p-sortIcon
+                    field="priceTicket"></p-sortIcon>
+            </th>
+            <th pSortableColumn="cinemas" style="width:20%">السينمات </th>
+            <th pSortableColumn="personNumber" style="width:10%">عدد الاشخاص </th>
+            <th pSortableColumn="payNumber" style="width:10%">عدد مرات الشراء </th>
+            <th pSortableColumn="ticket" style="width:20%">التذكرة </th>
+
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr>
+            <td *ngFor="let col of columns">
+                <span pTooltip="صيدناوي مول , برج العرب" tooltipPosition="top">{{rowData[col.field]}}</span>
+            </td>
+        </tr>
+    </ng-template>
+</p-table> -->
+<div class="card">
+    <p-table #dt1 [value]="ticketData" dataKey="id" [rows]="10" [showCurrentPageReport]="true"
+        [rowsPerPageOptions]="[10, 25, 50]" [paginator]="true"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        [globalFilterFields]="['priceTicket']">
+        <ng-template pTemplate="header">
+            <tr>
+                <th style="min-width:15rem">
+                    <div class="flex align-items-center">
+                        المستخدم
+                        <ng-template>
+                            <p-multiSelect [options]="users" optionLabel="name">
+                                <ng-template let-option pTemplate="item">
+                                    <div class="inline-block vertical-align-middle">
+                                        <img [alt]="option.image" src="assets/Image-30.png" width="24"
+                                            class="vertical-align-middle" />
+                                        <span class="ml-1 mt-1">{{ option.name }}</span>
+                                        <span class="ml-1 mt-1">{{ option.phone }}></span>
+                                    </div>
+                                </ng-template>
+                            </p-multiSelect>
+                        </ng-template>
+                    </div>
+                </th>
+                <th style="min-width:10rem">
+                    <div class="flex align-items-center">
+                        رقم التذكرة
+                    </div>
+                </th>
+                <th style="min-width:10rem" pSortableColumn="priceTicket">
+                    <div class="flex align-items-center">
+                        قيمى التذكرة
+                        <p-sortIcon  field="priceTicket"></p-sortIcon>
+                    </div>
+                </th>
+                <th style="min-width:10rem">
+                    <div class="flex align-items-center">
+                        السينمات
+                    </div>
+                </th>
+                <th style="min-width:10rem">
+                    <div class="flex align-items-center">
+                        عدد الاشخاص
+                    </div>
+                </th>
+                <th style="min-width:10rem">
+                    <div class="flex align-items-center">
+                        عدد مرات الشراء
+                    </div>
+                </th>
+                <th style="min-width:10rem">
+                    <div class="flex align-items-center">
+                        التذكرة
+                    </div>
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-ticketData>
+            <tr>
+                <td>
+                    <img src={{ticketData.user.image}} width="32"
+                        style="vertical-align: middle" />
+                    <span>{{ ticketData.user.name }}</span>
+                    <br>
+                    <span>{{ticketData?.user?.phone}}</span> 
+                </td>
+                <td>
+                    {{ticketData.numberTicket }}
+                </td>
+                <td>
+                    {{ ticketData.priceTicket}}
+                </td>
+                <td>
+                    <span pTooltip="صيدناوي مول , برج العرب" tooltipPosition="top">{{ ticketData.cinemas }}</span>
+                </td>
+                <td>
+                    {{ ticketData.personNumber }}
+                </td>
+                <td>
+                    {{ ticketData.payNumber }}
+                </td>
+                <td>
+                    {{ ticketData.ticket }}
+                </td>
+
+
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

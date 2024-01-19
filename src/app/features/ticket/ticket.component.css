@@ -1,0 +1,40 @@
+.header {
+    .update {
+        background-color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 1.1rem;
+        padding: .5%;
+        float: left;
+
+        i {
+            color: #8a7efa;
+            font-size: 1.3rem;
+        }
+
+
+    }
+
+    i:hover {
+        color: #fff;
+    }
+
+    .update:hover {
+        background-color: #8a7efa;
+        color: #fff;
+    }
+
+    .number-ticket {
+        float: right;
+
+        .arrow {
+            background-color: #ddd;
+            border-radius: 4px;
+            padding: 1%;
+        }
+    }
+
+    .clear {
+        clear: both;
+    }
+}
